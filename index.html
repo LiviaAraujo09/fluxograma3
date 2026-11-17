@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">✦ FLUXO INTELIGENTE</div>
+    <p>Descubra seu perfil através das suas escolhas.</p>
+</header>
+
+<main class="app">
+
+    <section id="inicio" class="tela">
+        <div class="icone-grande">🧠</div>
+        <span class="tag">EXPERIÊNCIA INTERATIVA</span>
+        <h1>Descubra seu caminho!</h1>
+        <p>
+            Responda às perguntas, acompanhe seu fluxograma
+            e descubra seu perfil ao final da experiência.
+        </p>
+
+        <div class="info">
+            <div>
+                <strong>04</strong>
+                <span>Perguntas</span>
+            </div>
+            <div>
+                <strong>02</strong>
+                <span>Opções</span>
+            </div>
+            <div>
+                <strong>01</strong>
+                <span>Resultado</span>
+            </div>
+        </div>
+
+        <button class="principal" onclick="iniciar()">
+            Começar experiência <span>→</span>
+        </button>
+    </section>
+
+    <section id="quiz" class="tela escondido">
+
+        <div class="quiz-topo">
+            <span id="contador">PERGUNTA 01</span>
+            <span id="porcentagem">0%</span>
+        </div>
+
+        <div class="barra">
+            <div id="progresso"></div>
+        </div>
+
+        <div class="pergunta-icone">💭</div>
+
+        <h2 id="pergunta"></h2>
+        <p class="subtexto">Escolha a alternativa que mais combina com você.</p>
+
+        <div id="opcoes"></div>
+
+        <button class="voltar" onclick="voltarPergunta()">
+            ← Voltar à pergunta anterior
+        </button>
+
+    </section>
+
+    <section id="resultado" class="tela escondido">
+
+        <span class="tag">SUA JORNADA FOI CONCLUÍDA</span>
+
+        <div class="icone-grande">🏆</div>
+
+        <h1 id="tituloResultado">Seu resultado!</h1>
+
+        <img id="resultadoFoto" class="foto-resultado"
+             src="" alt="Imagem do resultado">
+
+        <p id="mensagem"></p>
+
+        <div class="resumo">
+            <h3>Seu percurso</h3>
+            <div id="caminho"></div>
+        </div>
+
+        <button class="principal" onclick="reiniciar()">
+            ↻ Fazer novamente
+        </button>
+
+    </section>
+
+</main>
+
+<section class="area-fluxo">
+    <div class="titulo-fluxo">
+        <span class="tag">VISUALIZAÇÃO AO VIVO</span>
+        <h2>Seu fluxograma</h2>
+        <p>Acompanhe cada etapa da sua jornada.</p>
+    </div>
+
+    <div id="diagrama">
+        <div class="no inicio-no">🏁 INÍCIO</div>
+        <div class="seta">↓</div>
+        <div class="no aguardando">Aguardando suas respostas...</div>
+    </div>
+</section>
+
+<footer>
+    <strong>✦ FLUXO INTELIGENTE</strong>
+    <p>Uma experiência de escolhas e descobertas.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
